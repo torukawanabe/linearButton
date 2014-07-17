@@ -27,8 +27,10 @@ void loop(){
   pos = analogRead(positionPin);
   if(movementState == 0){
     moveArm(offValue);
+    digitalWrite(ledPin, HIGH);
   }else{
     moveArm(onValue);
+    digitalWrite(ledPin, LOW);
   }
   Serial.println(pos);
   delay(2);
@@ -40,7 +42,6 @@ void handleButton()
 {
   buttonState = digitalRead(buttonPin);
   if (buttonState == HIGH) {
-    digitalWrite(ledPin, HIGH);
     if(movementState == 0){
       movementState = 1;
     }else{
