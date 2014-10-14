@@ -4,8 +4,8 @@ const int positionPin = A0;
 const int motor1Pin = 9;
 const int motor2Pin = 10;
 
-const int onValue  = 395;
-const int offValue = 800; 
+const int onValue  = 345;
+const int offValue = 765; 
 
 int buttonState = 0;        
 int movementState = 0;
